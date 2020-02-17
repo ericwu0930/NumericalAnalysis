@@ -15,5 +15,5 @@ for k=1:n
     end
     v=v+w*y(k);
 end
-disp(['º∆À„”√ ±',num2str(toc)]);
+disp(['Time Consuming: ',num2str(toc)]);
 end
