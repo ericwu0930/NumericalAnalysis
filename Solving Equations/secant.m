@@ -1,5 +1,5 @@
 function [p,i]=secant(p0,p1,TOL,N,f)
-%% ¸îÏß·¨
+%% Secant
 %% parameters
 % input: initial approximation p0; tolerance TOL; maximum number of
 % iterations N; function f; first order derivative of f. 

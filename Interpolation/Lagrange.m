@@ -1,5 +1,5 @@
 function v=Lagrange(x,y,u)
-%% 拉格朗日插值法
+%% Lagrange Interpolation Method
 %% parameters
 % input:  x and y are vectors of the same length that define the
 % interpolating points, u is a vector of points where the function is to be evaluated

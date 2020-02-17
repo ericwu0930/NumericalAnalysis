@@ -1,5 +1,5 @@
 function v=Hermite(x,y,dy,u)
-%% 分段埃尔米特三次插值法
+%% Hermite Interpolation
 %% parameters
 % input:x and y are vectors of the same length that define the
 % interpolating points, u is a vector of points where the function is to be
@@ -12,7 +12,7 @@ segment=cell(n-1,1);
 v=[];
 i=2;
 start=1;
-%% 将u分割
+%% divide u into some segments according to interpolating points 
 for j=1:length(u)
     if u(j)>x(i)
         segment{i-1}=u(start:j-1);
@@ -24,7 +24,7 @@ for j=1:length(u)
         break;
     end
 end
-%% 为每一段构造Hermite函数
+%% 
 for i=2:n
     t1=(segment{i-1}-x(i-1))./(x(i)-x(i-1));
     t2=(segment{i-1}-x(i))./(x(i-1)-x(i));
@@ -32,5 +32,5 @@ for i=2:n
         (segment{i-1}-x(i)).*(t1.^2)*dy(i);
     v=[v,tmp];
 end
-disp(['计算用时',num2str(toc)]);
+disp(['Time Consuming: ',num2str(toc)]);
 end

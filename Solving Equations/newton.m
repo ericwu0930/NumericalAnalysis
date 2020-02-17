@@ -1,5 +1,4 @@
 function [i,p]=newton(p0,TOL,N,f,fprime)
-%% Å£¶Ù·¨
 %% parameters
 % input: initial approximation p0; tolerance TOL; maximum number of
 % iterations N; function f; first order derivative of f. 

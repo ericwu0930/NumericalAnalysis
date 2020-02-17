@@ -1,13 +1,13 @@
 function v=Newton(x,y,u)
-%% 差分形式的牛顿插值公式
+%% Newton's Divided Differences
 %% parameters
 % input:  x and y are vectors of the same length that define the
 % interpolating points, u is a vector of points where the function is to be evaluated
 % output: y is the result
 %%
 tic
-x=x(:); %将x变为列向量
-y=y(:); %将y变为列向量
+x=x(:); %change into column vector
+y=y(:); %change into column vector
 n=length(x);
 v=zeros(size(u));
 v=v+y(1);
@@ -23,5 +23,5 @@ for i=2:n
     end
     v=v+term;
 end
-disp(['计算用时',num2str(toc)]);
+disp(['Time Consuming: ',num2str(toc)]);
 end
