@@ -1,5 +1,5 @@
 function v=Hermite(x,y,dy,u)
-%% Hermite Interpolation
+%% 三次分段Hermite插值
 %% parameters
 % input:x and y are vectors of the same length that define the
 % interpolating points, u is a vector of points where the function is to be

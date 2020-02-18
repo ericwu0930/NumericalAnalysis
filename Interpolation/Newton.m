@@ -1,4 +1,4 @@
-function v=Newton(x,y,u)
+afunction v=Newton(x,y,u)
 %% Newton's Divided Differences
 %% parameters
 % input:  x and y are vectors of the same length that define the
