@@ -1,14 +1,15 @@
-function [i,p]=newton(p0,TOL,N,f,fprime)
+function [i,p]=newton_modified(p0,TOL,N,f,fprime,fpp)
+%% 改进的牛顿法
 %% parameters
 % input: initial approximation p0; tolerance TOL; maximum number of
-% iterations N; function f; first order derivative of f. 
+% iterations N; function f; first order derivative of f; second order derivative of f, fpp. 
 % output: approximate solution p
 %%
 x=[p0];
 hold on;
 i=1;
 while i<=N
-    p=p0-f(p0)/fprime(p0);
+    p=p0-f(p0)*fprime(p0)/(fprime(p0)^2-f(p0)*fpp(p0));
     if p<x(1)
         x=linspace(p-0.5,x(length(x)),100);
         plot(x,f(x),'b-');

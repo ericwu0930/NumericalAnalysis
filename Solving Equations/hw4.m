@@ -1,4 +1,4 @@
-%% p76 16
+ %% p76 16
 %%
 f=@(x) 1/2+1/4*x^2-x*sin(x)-1/2*cos(2*x);
 fprime=@(x)1/2*x-sin(x)-x*cos(x)+sin(2*x);
