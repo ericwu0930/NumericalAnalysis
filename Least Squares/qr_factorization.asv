@@ -1,0 +1,15 @@
+function [res se]=qr_factorization(A)
+%% parameters:
+% input: x,y represent the given points; order means the order of
+% parameterized model
+% outp|ut: res means the coefficient of the parameterized model
+%% code:
+x=x(:);
+y=y(:);
+A=ones(length(x),order+1);
+% construct matrix A
+for i=2:order+1
+    A(:,i)=x.^(i-1);
+end
+[q r]=qr_customed(A);
+d=Q
